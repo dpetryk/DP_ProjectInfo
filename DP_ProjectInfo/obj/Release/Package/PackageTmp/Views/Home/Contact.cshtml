@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DP_ProjectInfo.Models.ProjectManager>
+@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title</h2>
+@{Html.RenderAction("_Contact", "ProjectManagers");}
+
+<hr />
+<address>
+    Company Name<br />
+    Street, WA 98052-6399<br />
+    <abbr title="Phone">Phone:</abbr>
+    425-555-0100
+</address>
+
+<address>
+    <strong>Administrator:</strong>
+    <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+    <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/damian-petryk-933774108" data-format="hover" data-related="false" data-text="Damian Petryk"></script>
+</address>

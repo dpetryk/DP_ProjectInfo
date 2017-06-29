@@ -1,0 +1,26 @@
+﻿@model DP_ProjectInfo.Models.Attachment
+
+@{
+    ViewBag.Title = "_Upload";
+}
+<form method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="col-lg-6 col-sm-6 col-12">
+        <div class="input-group">
+            <label class="input-group-btn">
+                <span class="btn btn-default">
+                    Browse&hellip; <input type="file" name="File" id="File" style="display: none">
+                </span>
+            </label>
+            <input type="text" class="form-control" readonly>
+        </div>
+        <br />
+        <input type="submit" value="Upload" name="Upload" id="Upload" class="btn btn-primary" />
+    </div>
+</form>
+
+
+
+
+

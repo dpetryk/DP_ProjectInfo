@@ -275,29 +275,29 @@ function showAll() {
     }
 }
 
-//function calendar(){  -- działa tylko na Chrome
-//var rows = document.getElementsByTagName('tr');
-//for (var i = 1; i < rows.length; i++) {
+function calendar(){ 
+var rows = document.getElementsByTagName('tr');
+for (var i = 1; i < rows.length; i++) {
 
-//    var cells = rows[i].children;
-//    var start = new Date(cells[3].textContent).getDate() - 1;
-//    var end = new Date(cells[4].textContent).getDate() - 1;
-//    for (var j = start; j < end; j++) {
-//        cells[j + 5].style.backgroundColor = "#2196f3";
-//    }
-//}
-//}
-
-
-function calendar() {
-    var rows = document.getElementsByTagName('tr');
-    for (var i = 1; i < rows.length; i++) {
-
-        var cells = rows[i].children;
-        var start = parseInt(((cells[3].textContent).trim()).slice(3,5)) - 1;
-        var end = parseInt(((cells[4].textContent).trim()).slice(3, 5)) - 1;
-        for (var j = start; j < end; j++) {
-            cells[j + 5].style.backgroundColor = "#2196f3";
-        }
+    var cells = rows[i].children;
+    var start = new Date((cells[3].textContent).trim()).getDate() - 1;
+    var end = new Date((cells[4].textContent).trim()).getDate() - 1;
+    for (var j = start; j < end; j++) {
+        cells[j + 5].style.backgroundColor = "#2196f3";
     }
 }
+}
+
+
+//function calendar() {
+//    var rows = document.getElementsByTagName('tr');
+//    for (var i = 1; i < rows.length; i++) {
+
+//        var cells = rows[i].children;
+//        var start = parseInt(((cells[3].textContent).trim()).slice(3,5)) - 1;
+//        var end = parseInt(((cells[4].textContent).trim()).slice(3, 5)) - 1;
+//        for (var j = start; j < end; j++) {
+//            cells[j + 5].style.backgroundColor = "#2196f3";
+//        }
+//    }
+//}

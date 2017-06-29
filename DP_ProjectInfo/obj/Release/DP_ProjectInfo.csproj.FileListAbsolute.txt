@@ -80,3 +80,6 @@ c:\users\dp\documents\visual studio 2015\Projects\DP_ProjectInfo\DP_ProjectInfo\
 c:\users\dp\documents\visual studio 2015\Projects\DP_ProjectInfo\DP_ProjectInfo\obj\Release\DP_ProjectInfo.dll
 c:\users\dp\documents\visual studio 2015\Projects\DP_ProjectInfo\DP_ProjectInfo\obj\Release\DP_ProjectInfo.pdb
 c:\users\dp\documents\visual studio 2015\Projects\DP_ProjectInfo\DP_ProjectInfo\obj\Release\DP_ProjectInfo.csprojResolveAssemblyReference.cache
+C:\Users\DP\Documents\Visual Studio 2015\Projects\DP_ProjectInfo\DP_ProjectInfo\bin\SendGrid.dll
+C:\Users\DP\Documents\Visual Studio 2015\Projects\DP_ProjectInfo\DP_ProjectInfo\bin\SendGrid.pdb
+C:\Users\DP\Documents\Visual Studio 2015\Projects\DP_ProjectInfo\DP_ProjectInfo\bin\SendGrid.xml

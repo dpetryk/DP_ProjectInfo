@@ -280,8 +280,8 @@ var rows = document.getElementsByTagName('tr');
 for (var i = 1; i < rows.length; i++) {
 
     var cells = rows[i].children;
-    var start = new Date((cells[3].textContent).trim()).getDate() - 1;
-    var end = new Date((cells[4].textContent).trim()).getDate() - 1;
+    var start = new Date((cells[3].textContent).trim()).getMonth();
+    var end = new Date((cells[4].textContent).trim()).getMonth();
     for (var j = start; j < end; j++) {
         cells[j + 5].style.backgroundColor = "#2196f3";
     }

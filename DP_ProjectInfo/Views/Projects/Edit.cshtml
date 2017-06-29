@@ -37,64 +37,80 @@
         <div class="form-group">
             @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control", Value = Model.StartDate.ToString("yyyy-MM-dd") } })
                 @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.DeliveryDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DeliveryDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.DeliveryDate, new { htmlAttributes = new { @class = "form-control", Value = Model.DeliveryDate.ToString("yyyy-MM-dd") } })
                 @Html.ValidationMessageFor(model => model.DeliveryDate, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control" } })*@
-                <select class="form-control" id="Status" name="Status">
-                    <option>Not started</option>
-                    <option>In progress</option>
-                    <option>Cancelled</option>
-                    <option>Completed</option>
-                    <option>On hold</option>
-                </select>
+
+                @Html.DropDownListFor(model => model.Status,
+                     new SelectList(new List<SelectListItem>
+  {
+      new SelectListItem { Text = "Not Started" , Value = "Not Started"},
+      new SelectListItem { Text = "In Progress", Value = "In Progress" },
+      new SelectListItem { Text = "Cancelled", Value = "Cancelled" },
+      new SelectListItem { Text = "Completed", Value = "Completed" },
+      new SelectListItem { Text = "On hold", Value = "On hold" }
+  },
+    "Value", "Text", "True"), new { @class = "form-control" })
+
                 @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.Priority, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.Priority, new { htmlAttributes = new { @class = "form-control" } })*@
-                <select class="form-control" id="Priority" name="Priority">
-                    <option>High</option>
-                    <option>Medium</option>
-                    <option>Low</option>
-                </select>
+
+                @Html.DropDownListFor(model => model.Priority,
+                     new SelectList(new List<SelectListItem>
+  {
+      new SelectListItem { Text = "High" , Value = "High"},
+      new SelectListItem { Text = "Medium", Value = "Medium" },
+      new SelectListItem { Text = "Low", Value = "Low" }
+  },
+    "Value", "Text", "True"), new { @class = "form-control" })
+
                 @Html.ValidationMessageFor(model => model.Priority, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.Effort, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.Effort, new { htmlAttributes = new { @class = "form-control" } })*@
-                <select class="form-control" id="Effort" name="Effort">
-                    <option>Big</option>
-                    <option>Medium</option>
-                    <option>Small</option>
-                </select>
+
+                @Html.DropDownListFor(model => model.Effort,
+                     new SelectList(new List<SelectListItem>
+  {
+      new SelectListItem { Text = "Big" , Value = "Big"},
+      new SelectListItem { Text = "Medium", Value = "Medium" },
+      new SelectListItem { Text = "Small", Value = "Small" }
+  },
+    "Value", "Text", "True"), new { @class = "form-control" })
+
                 @Html.ValidationMessageFor(model => model.Effort, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.DeliveryStatus, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.DeliveryStatus, new { htmlAttributes = new { @class = "form-control" } })*@
-                <select class="form-control" id="DeliveryStatus" name="DeliveryStatus">
-                    <option>Green</option>
-                    <option>Amber</option>
-                    <option>Red</option>
-                </select>
+
+                @Html.DropDownListFor(model => model.DeliveryStatus,
+                     new SelectList(new List<SelectListItem>
+  {
+      new SelectListItem { Text = "Green" , Value = "Green"},
+      new SelectListItem { Text = "Amber", Value = "Amber" },
+      new SelectListItem { Text = "Red", Value = "Red" }
+  },
+    "Value", "Text", "True"), new { @class = "form-control" })
+
                 @Html.ValidationMessageFor(model => model.DeliveryStatus, "", new { @class = "text-danger" })
             </div>
         </div>
